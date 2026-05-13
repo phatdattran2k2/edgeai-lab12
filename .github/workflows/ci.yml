@@ -54,7 +54,7 @@ jobs:
       - name: Run pytest
         run: pytest tests/ -v
 
-build:
+  build:
   name: Build & push ARM64 image
   runs-on: ubuntu-latest
   needs: [lint, test] # Chỉ build nếu lint và test đã pass
