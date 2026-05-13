@@ -8,7 +8,9 @@ Run locally with: pytest -v tests/
 """
 
 from pathlib import Path
+
 import pytest
+
 
 def test_best_pt_exists():
     """The fine-tuned weights file must be present in the repo."""
@@ -19,7 +21,7 @@ def test_best_pt_exists():
 def test_requirements_pinned():
     """Every dep in requirements.txt should be pinned (== or ~=)."""
     req = (Path(__file__).parent.parent / "requirements.txt").read_text()
-    
+
     for line in req.splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
