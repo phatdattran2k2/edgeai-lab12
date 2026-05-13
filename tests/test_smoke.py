@@ -46,3 +46,4 @@ def test_dockerfile_uses_arm64_base():
 def test_required_files(name):
     """Files the Docker COPY steps reference must exist."""
     assert (Path(__file__).parent.parent / name).exists(), f"{name} missing"
+
